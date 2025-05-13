@@ -18,3 +18,30 @@ window.addEventListener('pointerdown', function () {
         audio.play();          // Bắt đầu phát
     }
 }, { once: true });
+
+
+const loveBtn = document.getElementById('loveBtn');
+
+loveBtn.addEventListener('click', () => {
+    for (let i = 0; i < 10; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.textContent = '❤️';
+
+        // Tạo vị trí ngẫu nhiên theo chiều ngang
+        const left = Math.random() * window.innerWidth;
+        const delay = Math.random() * 0.5; // ngẫu nhiên delay rơi
+
+        heart.style.left = `${left}px`;
+        heart.style.top = `-30px`;
+        heart.style.animationDelay = `${delay}s`;
+
+        document.body.appendChild(heart);
+
+        // Xóa tim sau 3s
+        setTimeout(() => {
+            heart.remove();
+        }, 3000);
+    }
+});
+

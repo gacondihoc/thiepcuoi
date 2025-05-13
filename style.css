@@ -20,15 +20,17 @@
       object-fit: cover;
       /* giữ tỷ lệ và cắt nếu cần */
       border-radius: 10px;
-      object-position: 0 85%;
+      /* object-position: 0 85%; */
       overflow: hidden;
       /* bo góc nếu muốn */
   }
 
   h1 {
       font-family: 'Great Vibes', cursive;
-      color: #f87070;
+      color: #faf5f5;
       letter-spacing: 3.5px;
+      font-size: 10rem;
+
   }
 
   h2,
@@ -39,7 +41,7 @@
   }
 
   header h1 {
-      font-size: 4rem;
+      font-size: 5rem;
   }
 
   section {
@@ -50,14 +52,15 @@
   }
 
   header {
-      background: url('image/ảnh-nền-đầu.jpg') center/cover no-repeat;
-      height: 100vh;
+      background: url('image/anh1.jpg') center/cover no-repeat;
+      height: 120vh;
       color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-shadow: 0 0 8px #000;
+      background-position: 0 30%;
   }
 
   .families {
@@ -160,7 +163,7 @@
   }
 
   .thanks {
-      background: url('./image/ảnh-nền-đầu.jpg') center/cover no-repeat;
+      background: url('./image/anh13.jpg') center/cover no-repeat;
       color: white;
       text-shadow: 0 0 5px #000;
       border-radius: 10px;
@@ -196,6 +199,115 @@
       transform: translateY(0);
   }
 
+  .love-button-wrapper {
+      text-align: center;
+      margin-top: 2rem;
+  }
+
+  #loveBtn {
+      font-size: 3rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      animation: pulse 1.5s infinite;
+  }
+
+  .love-label {
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin-top: 0.5rem;
+  }
+
+  .love-button-wrapper {
+      text-align: center;
+      margin-top: 2rem;
+  }
+
+  #loveBtn {
+      font-size: 3rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      animation: pulse 1.5s infinite;
+  }
+
+  .love-label {
+      font-size: 1rem;
+      color: #fff;
+      margin-top: 0.5rem;
+  }
+
+  @keyframes pulse {
+      0% {
+          transform: scale(1);
+      }
+
+      50% {
+          transform: scale(1.2);
+      }
+
+      100% {
+          transform: scale(1);
+      }
+  }
+
+  .heart {
+      position: fixed;
+      font-size: 1.5rem;
+      animation: fall 2.5s linear forwards;
+      pointer-events: none;
+      color: red;
+      /* ❤️ Màu đỏ */
+      z-index: 9999;
+  }
+
+  @keyframes fall {
+      0% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+      }
+
+      100% {
+          opacity: 0;
+          transform: translateY(100vh) scale(0.5);
+      }
+  }
+
+
+  @keyframes pulse {
+      0% {
+          transform: scale(1);
+      }
+
+      50% {
+          transform: scale(1.2);
+      }
+
+      100% {
+          transform: scale(1);
+      }
+  }
+
+  .heart {
+      position: absolute;
+      font-size: 1.5rem;
+      animation: fall 2.5s linear forwards;
+      pointer-events: none;
+      color: #ff3366;
+  }
+
+  @keyframes fall {
+      0% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+      }
+
+      100% {
+          opacity: 0;
+          transform: translateY(500px) scale(0.5);
+      }
+  }
+
   @media (max-width: 768px) {
 
       .family,
@@ -209,7 +321,7 @@
       }
 
       header h1 {
-          font-size: 2rem;
+          font-size: 1.8rem;
           text-align: center;
           padding: 0 1rem;
       }
@@ -219,7 +331,14 @@
       }
 
       .invitation p {
-          font-size: 1.1rem;
+          font-size: 1.5rem;
           padding: 0 1rem;
       }
+  }
+
+  #loveBtn {
+      color: #f6f2f2;
+
+
+
   }
