@@ -1,0 +1,225 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: 'Quicksand', sans-serif;
+      background: #a83240;
+      color: #fff8f0;
+      line-height: 1.6;
+  }
+
+  img {
+      width: 100%;
+      height: auto;
+      max-height: 60vh;
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+      /* giữ tỷ lệ và cắt nếu cần */
+      border-radius: 10px;
+      object-position: 0 85%;
+      overflow: hidden;
+      /* bo góc nếu muốn */
+  }
+
+  h1 {
+      font-family: 'Great Vibes', cursive;
+      color: #f87070;
+      letter-spacing: 3.5px;
+  }
+
+  h2,
+  h3 {
+      font-family: 'Dancing Script', cursive;
+      color: #f87070;
+      letter-spacing: 3.5px;
+  }
+
+  header h1 {
+      font-size: 4rem;
+  }
+
+  section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+  }
+
+  header {
+      background: url('image/ảnh-nền-đầu.jpg') center/cover no-repeat;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0 0 8px #000;
+  }
+
+  .families {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 2rem;
+  }
+
+  .family {
+      width: 45%;
+      background: #fff4f4;
+      color: #333;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .photos,
+  .album {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+  }
+
+  .photos img,
+  .album img {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 10px;
+  }
+
+  .event-box {
+      background: #fff4f4;
+      color: #222;
+      padding: 2rem;
+      margin: 2rem auto;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      max-width: 600px;
+  }
+
+  .calendar {
+      margin: 2rem auto;
+      max-width: 400px;
+      background: #fff4f4;
+      color: #222;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .calendar table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+
+  .calendar td,
+  .calendar th {
+      padding: 10px;
+      border: 1px solid #eee;
+  }
+
+  .highlight {
+      background: #ffc1c1;
+      font-weight: bold;
+      border-radius: 5px;
+  }
+
+  .map-box {
+      background: #fff4f4;
+      color: #222;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-around;
+      margin-top: 2rem;
+  }
+
+  .map-location {
+      flex: 1;
+      min-width: 200px;
+  }
+
+  .map-btn {
+      display: inline-block;
+      background: #c7637c;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+  }
+
+  .thanks {
+      background: url('./image/ảnh-nền-đầu.jpg') center/cover no-repeat;
+      color: white;
+      text-shadow: 0 0 5px #000;
+      border-radius: 10px;
+      min-height: 60vh;
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+  }
+
+  footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #ffe2e2;
+  }
+
+  audio {
+      display: none;
+  }
+
+  .fade-in {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+  }
+
+  .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+
+      .family,
+      .map-location {
+          width: 100%;
+      }
+
+      .photos img,
+      .album img {
+          max-width: 90%;
+      }
+
+      header h1 {
+          font-size: 2rem;
+          text-align: center;
+          padding: 0 1rem;
+      }
+
+      .invitation h2 {
+          font-size: 1.8rem;
+      }
+
+      .invitation p {
+          font-size: 1.1rem;
+          padding: 0 1rem;
+      }
+  }
