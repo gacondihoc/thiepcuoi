@@ -23,6 +23,7 @@
       /* object-position: 0 85%; */
       overflow: hidden;
       /* bo góc nếu muốn */
+      object-position: center top;
   }
 
   h1 {
@@ -52,15 +53,14 @@
   }
 
   header {
-      background: url('image/anh1.jpg') center/cover no-repeat;
-      height: 120vh;
+      background: url('image/anh10.jpg') center 20% / cover no-repeat;
+      height: 150vh;
       color: white;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-shadow: 0 0 8px #000;
-      background-position: 0 30%;
   }
 
   .families {
@@ -163,13 +163,11 @@
   }
 
   .thanks {
-      background: url('./image/anh13.jpg') center/cover no-repeat;
+      background: url('./image/anh13.jpg') center 30% / cover no-repeat;
       color: white;
       text-shadow: 0 0 5px #000;
       border-radius: 10px;
-      min-height: 60vh;
-      background-size: cover;
-      background-position: center center;
+      height: 145vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -309,32 +307,51 @@
   }
 
   @media (max-width: 768px) {
-
-      .family,
-      .map-location {
-          width: 100%;
+      header {
+          background-position: center 90%;
+          /* đẩy lên sát đỉnh trên màn nhỏ */
+          height: 100vh;
       }
 
-      .photos img,
-      .album img {
-          max-width: 90%;
-      }
-
-      header h1 {
-          font-size: 1.8rem;
-          text-align: center;
-          padding: 0 1rem;
-      }
-
-      .invitation h2 {
-          font-size: 1.8rem;
-      }
-
-      .invitation p {
-          font-size: 1.5rem;
-          padding: 0 1rem;
+      .thanks {
+          background: url('./image/anh13.jpg') center 20%/ cover no-repeat;
+          color: white;
+          text-shadow: 0 0 5px #000;
+          border-radius: 10px;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 4rem 2rem;
       }
   }
+
+  .family,
+  .map-location {
+      width: 100%;
+  }
+
+  .photos img,
+  .album img {
+      max-width: 90%;
+  }
+
+  header h1 {
+      font-size: 1.7rem;
+      text-align: center;
+      padding: 0 1rem;
+  }
+
+  .invitation h2 {
+      font-size: 1.8rem;
+  }
+
+  .invitation p {
+      font-size: 1.5rem;
+      padding: 0 1rem;
+  }
+
 
   #loveBtn {
       color: #f6f2f2;
