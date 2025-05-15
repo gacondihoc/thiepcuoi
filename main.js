@@ -49,34 +49,24 @@ const form = document.getElementById('rsvpForm');
 form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    const data = {
-        name: form.name.value.trim(),
-        attend: form.attend.value,
-        guestCount: form.guestCount.value || "0"
-    };
+    const formData = new FormData(form);
 
-    const sheetURL = "https://script.google.com/macros/s/AKfycbxL9GUtDOg1Dq095iMIFbLYFM1Ek8is7_jNwNMn-iOnKv7BrOpnLkNcL-3hycXNAMxVnw/exec"; // dán link Google Script của mày vào đây
+    const sheetURL = "https://script.google.com/macros/s/AKfycbxL9GUtDOg1Dq095iMIFbLYFM1Ek8is7_jNwNMn-iOnKv7BrOpnLkNcL-3hycXNAMxVnw/exec";
 
     try {
         const res = await fetch(sheetURL, {
             method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-                "Content-Type": "application/json"
-            }
+            body: formData,
         });
 
-        const result = await res.json();
-        if (result.result === "success") {
-            document.getElementById('rsvpMessage').textContent = "✅ Đã gửi thành công. Cảm ơn bạn!";
-            form.reset();
-        } else {
-            throw new Error("Lỗi phản hồi");
-        }
+        const resultText = await res.text();
+        document.getElementById('rsvpMessage').textContent = "✅ Đã gửi thành công!";
+        form.reset();
     } catch (err) {
-        document.getElementById('rsvpMessage').textContent = "❌ Có lỗi xảy ra. Vui lòng thử lại.";
+        document.getElementById('rsvpMessage').textContent = "❌ Gửi thất bại. Vui lòng thử lại.";
         console.error(err);
     }
 });
+
 
 
