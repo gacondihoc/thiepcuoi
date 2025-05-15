@@ -162,25 +162,18 @@
   </section>
 
   <!-- xác nhận đi hay không -->
-  <section class="rsvp">
+  <section class="rsvp fade-in">
     <h2>Xác nhận tham dự</h2>
     <form id="rsvpForm">
       <input type="text" name="name" placeholder="Họ tên của bạn" required />
-      <div class="radio-button">
-        <label>
-          <input type="radio" name="attend" value="yes" checked /> Tôi sẽ tham dự
-        </label>
-        <label>
-          <input type="radio" name="attend" value="no" /> Tôi không tham dự
-        </label>
-      </div>
-
+      <label><input type="radio" name="attend" value="Tôi sẽ tham dự" checked /> Tôi sẽ tham dự</label>
+      <label><input type="radio" name="attend" value="Tôi không tham dự" /> Tôi không tham dự</label>
       <input type="number" name="guestCount" min="0" placeholder="Số người đi cùng" />
-
       <button type="submit">Gửi xác nhận</button>
     </form>
     <p id="rsvpMessage"></p>
   </section>
+
 
 
 

@@ -54,19 +54,16 @@ form.addEventListener('submit', async function (e) {
     const sheetURL = "https://script.google.com/macros/s/AKfycbxL9GUtDOg1Dq095iMIFbLYFM1Ek8is7_jNwNMn-iOnKv7BrOpnLkNcL-3hycXNAMxVnw/exec";
 
     try {
-        const res = await fetch(sheetURL, {
+        const response = await fetch(sheetURL, {
             method: "POST",
-            body: formData,
+            body: formData, // không dùng JSON → tránh preflight CORS
         });
 
-        const resultText = await res.text();
-        document.getElementById('rsvpMessage').textContent = "✅ Đã gửi thành công!";
+        const text = await response.text();
+        document.getElementById("rsvpMessage").textContent = "✅ Đã gửi thành công!";
         form.reset();
     } catch (err) {
-        document.getElementById('rsvpMessage').textContent = "❌ Gửi thất bại. Vui lòng thử lại.";
         console.error(err);
+        document.getElementById("rsvpMessage").textContent = "❌ Gửi thất bại!";
     }
 });
-
-
-
