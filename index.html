@@ -161,6 +161,28 @@
     <img src="./image/anh12.jpg" alt="Ảnh album">
   </section>
 
+  <!-- xác nhận đi hay không -->
+  <section class="rsvp">
+    <h2>Xác nhận tham dự</h2>
+    <form id="rsvpForm">
+      <input type="text" name="name" placeholder="Họ tên của bạn" required />
+      <div class="radio-button">
+        <label>
+          <input type="radio" name="attend" value="yes" checked /> Tôi sẽ tham dự
+        </label>
+        <label>
+          <input type="radio" name="attend" value="no" /> Tôi không tham dự
+        </label>
+      </div>
+
+      <input type="number" name="guestCount" min="0" placeholder="Số người đi cùng" />
+
+      <button type="submit">Gửi xác nhận</button>
+    </form>
+    <p id="rsvpMessage"></p>
+  </section>
+
+
 
 
   <section class="fade-in thanks">

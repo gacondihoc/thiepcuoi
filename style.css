@@ -200,6 +200,50 @@
       background: #b44c67;
   }
 
+  /* ====================form xác nhận========================== */
+  .rsvp {
+      background: #fff0f5;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ddd;
+      text-align: center;
+  }
+
+  .rsvp input[type="text"],
+  .rsvp input[type="number"] {
+      width: 90%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+  }
+
+  .rsvp label {
+      display: block;
+      margin: 0.5rem 0;
+      font-weight: bold;
+      color: #333;
+  }
+
+  .radio-button {
+      margin-left: 1rem;
+      justify-items: left;
+  }
+
+  .rsvp button {
+      padding: 0.6rem 1.5rem;
+      background: #c7637c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+  }
+
+  .rsvp button:hover {
+      background: #b44c67;
+  }
 
   .thanks {
       background: url('./image/anh13.jpg') center 30% / cover no-repeat;
